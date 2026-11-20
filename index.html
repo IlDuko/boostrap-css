@@ -1,38 +1,353 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111229" />
+    <meta name="description" content="Una ruta visual para aprender los nueve temas de CSS del curso Frontend del profesor Jlopez." />
+    <title>Sakura CSS — Una ruta para darle estilo a la web</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-xl-4">
-          <div class="hero1">tema 1</div>
-        </div>
-        <div class="col-xl-4">
-          <div class="hero1">tema 2</div>
-        </div>
-        <div class="col-xl-4">
-          <div class="hero1">tema 3</div>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark site-nav sticky-top" aria-label="Navegación principal">
+      <div class="container py-2">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio" aria-label="Sakura CSS, inicio">
+          <span class="brand-mark" aria-hidden="true">桜</span>
+          <span class="brand-name">SAKURA<span>CSS</span></span>
+        </a>
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Abrir navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNavigation">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#ruta">La ruta</a></li>
+            <li class="nav-item"><a class="nav-link" href="#lecciones">Lecciones</a></li>
+            <li class="nav-item"><a class="nav-link" href="#fuente">Fuente y recursos</a></li>
+            <li class="nav-item ms-lg-2"><a class="btn btn-sm btn-sakura px-3" href="#lecciones">Empezar a aprender</a></li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
+
+    <main id="contenido">
+      <section class="hero d-flex align-items-center text-white position-relative overflow-hidden" id="inicio" aria-labelledby="hero-title">
+        <div class="hero__art" aria-hidden="true"></div>
+        <div class="hero__grain" aria-hidden="true"></div>
+        <div class="container position-relative hero__content py-5">
+          <div class="row align-items-center gy-5">
+            <div class="col-12 col-lg-7 col-xl-6">
+              <p class="eyebrow mb-3"><span class="eyebrow__dot"></span> GUÍA DE ESTUDIO · CSS3</p>
+              <h1 class="display-2 fw-bold hero__title mb-4" id="hero-title">Dale estilo<br />a tus ideas<span class="hero__period">.</span></h1>
+              <p class="hero__copy mb-4">Nueve conceptos para transformar una página en una experiencia. Aprende CSS paso a paso y construye interfaces que se sienten tuyas.</p>
+              <div class="d-flex flex-wrap align-items-center gap-3">
+                <a class="btn btn-sakura btn-lg px-4" href="#lecciones">Explorar las lecciones</a>
+                <a class="btn btn-outline-light btn-lg px-4 hero__secondary" href="#ruta">Ver la ruta</a>
+              </div>
+              <div class="d-flex flex-wrap gap-2 mt-4" aria-label="Características del curso">
+                <span class="hero-chip"><span aria-hidden="true">✿</span> 9 conceptos clave</span>
+                <span class="hero-chip"><span aria-hidden="true">◌</span> Para aprender haciendo</span>
+              </div>
+            </div>
+            <div class="col-12 col-lg-5 col-xl-4 ms-lg-auto">
+              <div class="hero-card p-4 p-xl-5">
+                <div class="d-flex justify-content-between align-items-start mb-4">
+                  <span class="hero-card__label">MISIÓN DE HOY</span>
+                  <span class="hero-card__seal" aria-hidden="true">CSS</span>
+                </div>
+                <p class="hero-card__kanji mb-2" lang="ja">デザインの力</p>
+                <h2 class="h3 fw-bold mb-2">Del selector al estilo</h2>
+                <p class="text-white-50 mb-4">Una aventura breve por las herramientas que dan forma a la web.</p>
+                <div class="hero-progress mb-2" role="img" aria-label="Ruta de nueve lecciones">
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="d-flex justify-content-between hero-card__meta"><span>9 estaciones</span><span>Tu ritmo, tu ruta</span></div>
+              </div>
+            </div>
+          </div>
+          <a class="hero-scroll d-none d-lg-inline-flex align-items-center gap-2" href="#ruta"><span class="hero-scroll__line"></span> DESLIZA PARA DESCUBRIR</a>
+        </div>
+        <span class="hero__vertical-note d-none d-xl-block" aria-hidden="true">CODE · CREATE · REPEAT</span>
+      </section>
+
+      <section class="route-section py-5" id="ruta" aria-labelledby="route-title">
+        <div class="container py-lg-4">
+          <div class="row align-items-end gy-3 mb-4 mb-lg-5">
+            <div class="col-12 col-lg-7 reveal">
+              <p class="eyebrow eyebrow--dark mb-2">TU MAPA DE APRENDIZAJE</p>
+              <h2 class="display-5 fw-bold section-title mb-0" id="route-title">Nueve pasos. Un mundo por crear.</h2>
+            </div>
+            <div class="col-12 col-lg-5 reveal">
+              <p class="section-intro mb-0">Cada estación suma una herramienta a tu kit de diseño. Empieza por las bases y avanza hasta controlar capas, estados y composición.</p>
+            </div>
+          </div>
+
+          <div class="route-strip row g-3" aria-label="Resumen de la ruta">
+            <div class="col-12 col-md-4 reveal">
+              <div class="route-stop h-100 d-flex align-items-center gap-3">
+                <span class="route-stop__number">01</span><span><strong>Entiende el lenguaje</strong><small>Sintaxis, herencia y cascada</small></span>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 reveal">
+              <div class="route-stop h-100 d-flex align-items-center gap-3">
+                <span class="route-stop__number">02</span><span><strong>Construye la forma</strong><small>Flexbox, Grid y adaptación</small></span>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 reveal">
+              <div class="route-stop h-100 d-flex align-items-center gap-3">
+                <span class="route-stop__number">03</span><span><strong>Cuida los detalles</strong><small>Estados, pseudoelementos y capas</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lessons-section py-5" id="lecciones" aria-labelledby="lessons-title">
+        <div class="container py-lg-4">
+          <div class="row align-items-end gy-3 mb-4">
+            <div class="col-12 col-lg-7 reveal">
+              <p class="eyebrow mb-2">EL DOJO DEL CÓDIGO</p>
+              <h2 class="display-5 fw-bold section-title text-white mb-0" id="lessons-title">Las nueve estaciones de CSS</h2>
+            </div>
+            <div class="col-12 col-lg-5 reveal">
+              <p class="lessons-intro mb-0">Explora cada tema, busca un concepto o filtra la ruta por categoría.</p>
+            </div>
+          </div>
+
+          <div class="lesson-tools row gy-3 align-items-center mb-4 reveal">
+            <div class="col-12 col-lg-5">
+              <label class="visually-hidden" for="lessonSearch">Buscar en las lecciones</label>
+              <div class="search-wrap">
+                <span class="search-wrap__icon" aria-hidden="true">⌕</span>
+                <input class="form-control lesson-search" id="lessonSearch" type="search" placeholder="Buscar un concepto, por ejemplo Grid" autocomplete="off" />
+              </div>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div class="d-flex flex-wrap justify-content-lg-end gap-2" role="group" aria-label="Filtrar lecciones por categoría">
+                <button class="btn btn-filter active" type="button" data-filter="all" aria-pressed="true">Todas</button>
+                <button class="btn btn-filter" type="button" data-filter="fundamentos" aria-pressed="false">Fundamentos</button>
+                <button class="btn btn-filter" type="button" data-filter="layout" aria-pressed="false">Maquetación</button>
+                <button class="btn btn-filter" type="button" data-filter="interaccion" aria-pressed="false">Interacción</button>
+              </div>
+            </div>
+            <div class="col-12">
+              <p class="results-note mb-0" id="lessonCount" aria-live="polite">Mostrando 9 lecciones</p>
+            </div>
+          </div>
+
+          <div class="row g-3 g-xl-4" id="lessonGrid">
+            <div class="col-12 col-md-6 col-xl-4 lesson-item" data-category="fundamentos">
+              <article class="card lesson-card lesson-card--pink h-100 reveal">
+                <div class="card-body p-4 p-xl-4">
+                  <div class="lesson-card__top d-flex justify-content-between align-items-center mb-4"><span class="lesson-number">01 / BASE</span><span class="lesson-icon" aria-hidden="true">{ }</span></div>
+                  <h3 class="h4 fw-bold">Sintaxis CSS</h3>
+                  <p class="lesson-copy">Una regla conecta un selector con una o varias declaraciones. Así le dices al navegador qué elemento cambiar y cómo.</p>
+                  <pre class="code-sample"><code>h1 {
+  color: #ff7fa8;
+}</code></pre>
+                  <p class="lesson-takeaway mb-0"><strong>Clave:</strong> selector, propiedad y valor.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 lesson-item" data-category="fundamentos">
+              <article class="card lesson-card lesson-card--violet h-100 reveal">
+                <div class="card-body p-4 p-xl-4">
+                  <div class="lesson-card__top d-flex justify-content-between align-items-center mb-4"><span class="lesson-number">02 / BASE</span><span class="lesson-icon" aria-hidden="true">&lt;/&gt;</span></div>
+                  <h3 class="h4 fw-bold">Cómo incorporar CSS</h3>
+                  <p class="lesson-copy">Puedes escribir estilos en línea, dentro de una etiqueta <code>&lt;style&gt;</code> o en un archivo externo. Separarlo en otro archivo facilita mantener el proyecto.</p>
+                  <pre class="code-sample"><code>&lt;link rel="stylesheet"
+      href="style.css"&gt;</code></pre>
+                  <p class="lesson-takeaway mb-0"><strong>Clave:</strong> elige la forma según el alcance y mantenimiento.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 lesson-item" data-category="fundamentos">
+              <article class="card lesson-card lesson-card--blue h-100 reveal">
+                <div class="card-body p-4 p-xl-4">
+                  <div class="lesson-card__top d-flex justify-content-between align-items-center mb-4"><span class="lesson-number">03 / BASE</span><span class="lesson-icon" aria-hidden="true">¶</span></div>
+                  <h3 class="h4 fw-bold">Indentación, herencia y comentarios</h3>
+                  <p class="lesson-copy">La indentación ordena las reglas. Algunas propiedades, como <code>color</code> y <code>font-family</code>, pueden heredarse; los comentarios explican el código sin mostrarse en la página.</p>
+                  <pre class="code-sample"><code>/* Estilos de títulos */
+h1 {
+  color: inherit;
+}</code></pre>
+                  <p class="lesson-takeaway mb-0"><strong>Clave:</strong> claridad hoy, mantenimiento mañana.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 lesson-item" data-category="fundamentos">
+              <article class="card lesson-card lesson-card--orange h-100 reveal">
+                <div class="card-body p-4 p-xl-4">
+                  <div class="lesson-card__top d-flex justify-content-between align-items-center mb-4"><span class="lesson-number">04 / CASCADA</span><span class="lesson-icon" aria-hidden="true">#</span></div>
+                  <h3 class="h4 fw-bold">Niveles de especificidad</h3>
+                  <p class="lesson-copy">Si varias reglas coinciden, la cascada decide cuál aplica. A igualdad de origen e importancia, un selector por ID tiene más especificidad que uno por clase, y una clase más que un tipo.</p>
+                  <pre class="code-sample"><code>#protagonista { color: white; }
+.personaje { color: pink; }</code></pre>
+                  <p class="lesson-takeaway mb-0"><strong>Clave:</strong> escribe selectores claros; reserva <code>!important</code> para casos justificados.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 lesson-item" data-category="layout">
+              <article class="card lesson-card lesson-card--mint h-100 reveal">
+                <div class="card-body p-4 p-xl-4">
+                  <div class="lesson-card__top d-flex justify-content-between align-items-center mb-4"><span class="lesson-number">05 / COMPOSICIÓN</span><span class="lesson-icon" aria-hidden="true">▦</span></div>
+                  <h3 class="h4 fw-bold">Flexbox, Grid y breakpoints</h3>
+                  <p class="lesson-copy">Flexbox alinea elementos en un eje; Grid organiza filas y columnas. Los breakpoints marcan anchos donde la composición puede cambiar. Bootstrap ofrece una cuadrícula adaptable lista para usar.</p>
+                  <pre class="code-sample"><code>.col-12 .col-md-6
+.col-xl-4</code></pre>
+                  <p class="lesson-takeaway mb-0"><strong>Clave:</strong> Bootstrap aporta contenedores, filas y columnas por breakpoint.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 lesson-item" data-category="layout">
+              <article class="card lesson-card lesson-card--cyan h-100 reveal">
+                <div class="card-body p-4 p-xl-4">
+                  <div class="lesson-card__top d-flex justify-content-between align-items-center mb-4"><span class="lesson-number">06 / ADAPTACIÓN</span><span class="lesson-icon" aria-hidden="true">⌘</span></div>
+                  <h3 class="h4 fw-bold">Media queries</h3>
+                  <p class="lesson-copy">Una media query aplica CSS cuando se cumple una condición, como el ancho de la ventana. En esta página, Bootstrap resuelve la distribución adaptable con sus clases responsivas.</p>
+                  <pre class="code-sample"><code>@media (min-width: 48rem) {
+  /* reglas para pantallas amplias */
+}</code></pre>
+                  <p class="lesson-takeaway mb-0"><strong>Clave:</strong> adapta el diseño según el contexto de visualización.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 lesson-item" data-category="interaccion">
+              <article class="card lesson-card lesson-card--lilac h-100 reveal">
+                <div class="card-body p-4 p-xl-4">
+                  <div class="lesson-card__top d-flex justify-content-between align-items-center mb-4"><span class="lesson-number">07 / DETALLE</span><span class="lesson-icon" aria-hidden="true">::</span></div>
+                  <h3 class="h4 fw-bold">Pseudoelementos</h3>
+                  <p class="lesson-copy">Dan estilo a una parte de un elemento o crean contenido decorativo sin agregar otra etiqueta al HTML.</p>
+                  <pre class="code-sample"><code>.titulo::after {
+  content: " ✿";
+}</code></pre>
+                  <p class="lesson-takeaway mb-0"><strong>Clave:</strong> se escriben con doble dos puntos, como <code>::before</code> y <code>::after</code>.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 lesson-item" data-category="interaccion">
+              <article class="card lesson-card lesson-card--yellow h-100 reveal">
+                <div class="card-body p-4 p-xl-4">
+                  <div class="lesson-card__top d-flex justify-content-between align-items-center mb-4"><span class="lesson-number">08 / DETALLE</span><span class="lesson-icon" aria-hidden="true">:)</span></div>
+                  <h3 class="h4 fw-bold">Pseudoclases</h3>
+                  <p class="lesson-copy">Aplican estilos cuando un elemento está en cierto estado: al pasar el cursor, recibir foco o ser el primero de una lista.</p>
+                  <pre class="code-sample"><code>a:hover,
+a:focus-visible {
+  color: #ff7fa8;
+}</code></pre>
+                  <p class="lesson-takeaway mb-0"><strong>Clave:</strong> diseña estados de interacción y foco accesibles.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 lesson-item" data-category="interaccion">
+              <article class="card lesson-card lesson-card--coral h-100 reveal">
+                <div class="card-body p-4 p-xl-4">
+                  <div class="lesson-card__top d-flex justify-content-between align-items-center mb-4"><span class="lesson-number">09 / CAPAS</span><span class="lesson-icon" aria-hidden="true">▱</span></div>
+                  <h3 class="h4 fw-bold">Z-index</h3>
+                  <p class="lesson-copy">Ordena elementos que se superponen. Su efecto depende del contexto de apilamiento; suele combinarse con <code>position</code>.</p>
+                  <pre class="code-sample"><code>.menu {
+  position: relative;
+  z-index: 2;
+}</code></pre>
+                  <p class="lesson-takeaway mb-0"><strong>Clave:</strong> piensa en capas, no solo en un número más alto.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="empty-state text-center py-5 px-3 mt-3 d-none" id="emptyState" role="status">
+            <span class="empty-state__flower d-block mb-3" aria-hidden="true">✿</span>
+            <h3 class="h4 fw-bold text-white">No encontramos esa lección</h3>
+            <p class="text-white-50 mb-3">Prueba con otra palabra o limpia los filtros.</p>
+            <button class="btn btn-outline-light" id="clearFilters" type="button">Ver todas las lecciones</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="practice-section py-5" aria-labelledby="practice-title">
+        <div class="container py-lg-4">
+          <div class="row g-4 align-items-stretch">
+            <div class="col-12 col-lg-5 reveal">
+              <div class="practice-heading h-100 p-4 p-lg-5">
+                <p class="eyebrow eyebrow--dark mb-2">APRENDE PROBANDO</p>
+                <h2 class="display-6 fw-bold section-title" id="practice-title">El detalle cambia toda la escena.</h2>
+                <p class="section-intro mb-0">CSS también responde a lo que hace la persona. Pasa el cursor o usa la tecla Tab para ver dos estados de un enlace.</p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-7 reveal">
+              <div class="practice-demo h-100 p-4 p-lg-5">
+                <div class="d-flex justify-content-between align-items-center mb-4"><span class="practice-demo__label">LABORATORIO DE PSEUDOCLASES</span><span class="practice-demo__status">EN VIVO</span></div>
+                <p class="practice-demo__code mb-4"><span class="code-muted">.link-sakura</span><span class="code-pink">:hover</span> { <span class="code-blue">color</span>: <span class="code-green">#ff7fa8</span>; }</p>
+                <a class="demo-link" href="#lecciones">Pruébame con mouse o teclado</a>
+                <p class="practice-demo__hint mt-4 mb-0">Prueba Tab para enfocar · El cambio visual usa una transición suave en CSS.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section py-5" aria-labelledby="faq-title">
+        <div class="container py-lg-4">
+          <div class="row gy-4">
+            <div class="col-12 col-lg-4 reveal">
+              <p class="eyebrow mb-2">ANTES DE EMPEZAR</p>
+              <h2 class="display-6 fw-bold text-white" id="faq-title">Preguntas del dojo</h2>
+              <p class="lessons-intro">Una guía rápida para conectar los temas.</p>
+            </div>
+            <div class="col-12 col-lg-8 reveal">
+              <div class="accordion dojo-accordion" id="dojoFaq">
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">¿Bootstrap reemplaza CSS?</button></h3>
+                  <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#dojoFaq"><div class="accordion-body">Bootstrap es un framework que incluye estilos, componentes y utilidades para construir interfaces. Sigue siendo CSS: conocer selectores, cascada y composición te permite usarlo con criterio.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">¿Flexbox y Grid hacen lo mismo?</button></h3>
+                  <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#dojoFaq"><div class="accordion-body">Ambos organizan elementos, pero resuelven problemas distintos. Flexbox funciona muy bien para una fila o columna; Grid permite definir una cuadrícula en dos dimensiones.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">¿Qué sigue después de estas nueve lecciones?</button></h3>
+                  <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#dojoFaq"><div class="accordion-body">Practica combinando los conceptos: maquetar una sección con Bootstrap, personalizar su apariencia y comprobar sus estados en distintos tamaños de pantalla.</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="source-section py-5" id="fuente" aria-labelledby="source-title">
+        <div class="container py-lg-4">
+          <div class="source-card p-4 p-lg-5 reveal">
+            <div class="row align-items-center gy-4">
+              <div class="col-12 col-lg-8">
+                <p class="eyebrow mb-2">SIGUE EXPLORANDO</p>
+                <h2 class="display-6 fw-bold text-white mb-3" id="source-title">La práctica hace al maestro.</h2>
+                <p class="source-copy mb-0">El temario de las nueve estaciones está basado en el módulo CSS del curso de Diseño Frontend publicado por el profesor Jlopez. Consulta la fuente para ver también sus recursos, enlaces y videoclases.</p>
+              </div>
+              <div class="col-12 col-lg-4 text-lg-end">
+                <a class="btn btn-sakura btn-lg px-4" href="https://www.pacgrafica.com/blog/curso-frontend/" target="_blank" rel="noopener noreferrer">Visitar el curso de Jlopez</a>
+                <a class="source-secondary d-block mt-3" href="https://www.pacgrafica.com/blog/" target="_blank" rel="noopener noreferrer">Conocer el blog de Pac Gráfica</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer py-4">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <a class="footer-brand" href="#inicio"><span aria-hidden="true">桜</span> SAKURA CSS</a>
+        <p class="footer-note mb-0">Hecho para aprender, experimentar y crear en la web.</p>
+        <a class="footer-top" href="#inicio">Volver al inicio</a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </body>
 </html>

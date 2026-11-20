@@ -149,7 +149,7 @@ a {
   background-image:
     linear-gradient(90deg, rgb(12 13 30 / 99%) 2%, rgb(15 16 36 / 92%) 32%, rgb(15 16 36 / 58%) 55%, rgb(15 16 36 / 12%) 100%),
     linear-gradient(0deg, rgb(15 16 36 / 58%), transparent 42%),
-    url("assets/css-sakura-studio.webp");
+    url("css-sakura-studio.webp");
   background-position: center, center, center 48%;
   background-size: cover;
 }
